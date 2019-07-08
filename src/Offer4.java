@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Offer4 {
 
     public static boolean find(int[][] arr, int target){
-        if(arr == null)
+        if(arr == null || arr.length == 0)
             return false;
 
         int row = arr.length - 1;
