@@ -1,5 +1,5 @@
 public class Offer5 {
-//从后往前赋值，降低时间复杂度
+//从后往前赋值，降低时间复杂度!
     public static String replaceBlank(StringBuffer str){
         if(str == null)
             return null;
