@@ -2,10 +2,10 @@ public class Offer3_2 {
     public static int getDuplication(int[] numbers, int length) {
         if (numbers == null || length <= 0)
             return -1;
-//        for (int i = 0; i < length; ++i) {
-//            if (numbers[i] < 1 || numbers[i] >= length)
-//                return -1;
-//        }
+        for (int i = 0; i < length; ++i) {
+            if (numbers[i] < 1 || numbers[i] >= length)
+                return -1;
+        }
 
         int start = 1;
         int end = length - 1;
