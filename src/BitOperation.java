@@ -5,7 +5,7 @@ public class BitOperation {
     public static int numberOf1(int n){
         int count = 0;
         while (n != 0){
-            n &= (n - 1);//把n的二进制表示中最右面的1置为0！
+            n &= (n - 1);//把n的二进制表示中最右面的1置为0！！！这个思路在位运算中很重要
             ++count;
         }
         return count;
