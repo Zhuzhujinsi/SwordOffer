@@ -14,36 +14,42 @@ public class BigNumber3 {
             printNumber(number1);
             return;
         }
-        int length1 = number1.length;
-        int length2 = number2.length;
-        int length = (length1 > length2) ? length1 + 1 : length2 + 1;
-        char[] result = new char[length];
-        int takeOver = 0;
-        int sum;
-        int index1 = length1 - 1;
-        int index2 = length2 - 1;
-        for(int i = length - 1; i >= 0; --i){
-            if(index1 >= 0 && index2 >= 0){
-                sum = (number1[index1] - '0') + (number2[index2] - '0') + takeOver;
-            }else if(index1 >= 0 && index2 < 0){
-                sum = number1[index1] - '0' + takeOver;
-            }else if(index1 < 0 && index2 >= 0){
-                sum = number2[index2] - '0' + takeOver;
-            }else
-                sum = takeOver;
-            --index1;
-            --index2;
+        //如果两个整数都为正数
+        if(number1[0] != '-' && number2[0] != '-') {
+            int length1 = number1.length;
+            int length2 = number2.length;
+            int length = (length1 > length2) ? length1 + 1 : length2 + 1;
+            char[] result = new char[length];
+            int takeOver = 0;
+            int sum;
+            int index1 = length1 - 1;
+            int index2 = length2 - 1;
+            for (int i = length - 1; i >= 0; --i) {
+                if (index1 >= 0 && index2 >= 0) {
+                    sum = (number1[index1] - '0') + (number2[index2] - '0') + takeOver;
+                } else if (index1 >= 0 && index2 < 0) {
+                    sum = number1[index1] - '0' + takeOver;
+                } else if (index1 < 0 && index2 >= 0) {
+                    sum = number2[index2] - '0' + takeOver;
+                } else
+                    sum = takeOver;
+                --index1;
+                --index2;
 
-            if(sum >= 10){
-                sum -= 10;
-                takeOver = 1;
-                result[i] = (char)('0' + sum);
-            }else {
-                result[i] = (char) ('0' + sum);
-                takeOver = 0;
+                if (sum >= 10) {
+                    sum -= 10;
+                    takeOver = 1;
+                    result[i] = (char) ('0' + sum);
+                } else {
+                    result[i] = (char) ('0' + sum);
+                    takeOver = 0;
+                }
             }
+            printNumber(result);
         }
-        printNumber(result);
+        //如果两个整数都为负数
+        //如果两个整数其中一个为负数
+
 
     }
 
