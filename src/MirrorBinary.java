@@ -3,6 +3,8 @@ import java.util.Stack;
 public class MirrorBinary {
     //循环实现二叉树镜像
     public TreeNode Mirror(TreeNode root){
+        if(root == null)
+            return root;
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
         while (node != null || !stack.isEmpty()){
