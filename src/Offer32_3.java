@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class Offer32_3 {
-    //按“之”字形打印二叉树
+    //按“之”字形打印二叉树，用两个栈来实现！
     public ArrayList<ArrayList<Integer>> print(TreeNode root){
         if(root == null)
             return null;
