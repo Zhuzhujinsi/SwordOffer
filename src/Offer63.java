@@ -15,11 +15,10 @@ public class Offer63 {
         int maxProfit = arr[1] - arr[0];
         int min = arr[0];
         int length = arr.length;
-        int j = 1;
         for(int i = 2; i < length; ++i){
-            if(arr[j] < min)
-                min = arr[j];
-            ++j;
+            if(arr[i - 1] < min)
+                min = arr[i- 1];
+
             int diff = arr[i] - min;
             if(diff > maxProfit)
                 maxProfit = diff;
